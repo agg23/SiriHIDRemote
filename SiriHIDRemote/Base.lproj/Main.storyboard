@@ -645,13 +645,13 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="82" y="-72"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Siri Remote" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="150" height="490"/>
@@ -699,6 +699,13 @@
                                     </customView>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="yyN-AC-l5g" customClass="CircleButtonView">
                                         <rect key="frame" x="85" y="10" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6SH-UN-SuS">
+                                                <rect key="frame" x="1" y="1" width="48" height="48"/>
+                                                <animations/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="TV" id="Aj3-Ne-tmB"/>
+                                            </imageView>
+                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="58Q-6Q-Rcv"/>
                                             <constraint firstAttribute="height" constant="50" id="YtE-CF-B8q"/>
@@ -720,6 +727,13 @@
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="p9j-FK-RIu" customClass="CircleButtonView">
                                         <rect key="frame" x="15" y="215" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wNE-GY-Be0">
+                                                <rect key="frame" x="1" y="1" width="48" height="48"/>
+                                                <animations/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Microphone" id="506-VQ-lx3"/>
+                                            </imageView>
+                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="12f-Is-rp5"/>
                                             <constraint firstAttribute="height" constant="50" id="hYb-WE-PLW"/>
@@ -728,6 +742,13 @@
                                     </customView>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="Gam-Fd-MKN" customClass="CircleButtonView">
                                         <rect key="frame" x="15" y="145" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaN-Wd-c4v">
+                                                <rect key="frame" x="1" y="1" width="48" height="48"/>
+                                                <animations/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Play:Pause" id="4pT-eS-toH"/>
+                                            </imageView>
+                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6d7-z0-Czr"/>
                                             <constraint firstAttribute="width" constant="50" id="cmU-7P-Ske"/>
@@ -739,6 +760,13 @@
                                         <subviews>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="w1n-T5-Q8m" customClass="CircleButtonView">
                                                 <rect key="frame" x="0.0" y="70" width="50" height="50"/>
+                                                <subviews>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r3E-BV-p1e">
+                                                        <rect key="frame" x="1" y="0.0" width="48" height="48"/>
+                                                        <animations/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Plus" id="i29-1u-l5L"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="8OJ-pV-jrz"/>
                                                     <constraint firstAttribute="height" constant="50" id="fJK-l0-9OY"/>
@@ -747,6 +775,13 @@
                                             </customView>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="OrN-Bn-2yr" customClass="CircleButtonView">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <subviews>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z9a-1R-BuO">
+                                                        <rect key="frame" x="1" y="1" width="48" height="48"/>
+                                                        <animations/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Minus" id="rJh-dK-FXa"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="pO9-Zx-dES"/>
                                                     <constraint firstAttribute="height" constant="50" id="yy1-DM-sku"/>
@@ -804,4 +839,11 @@
             <point key="canvasLocation" x="464" y="243"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Microphone" width="800" height="800"/>
+        <image name="Minus" width="800" height="800"/>
+        <image name="Play:Pause" width="800" height="800"/>
+        <image name="Plus" width="800" height="800"/>
+        <image name="TV" width="800" height="800"/>
+    </resources>
 </document>

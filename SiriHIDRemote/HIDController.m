@@ -53,15 +53,41 @@
     HIDDevice *device = [notification object];
     
     // TODO: Replace constant "DL5QD2HMGQQT" with a better way of finding the correct HIDDevice object
-    if([device productID] == 0x0266 && [device vendorID] == 0x4C && [[device transport] isEqualToString:@"BluetoothLowEnergy"] && [[device serialNumber] isEqualToString:@"DL5QD2HMGQQT"]) {
-        [self.siriRemotes addObject:device];
-        
-        
-        [device open];
-        NSLog(@"Connected to Siri Remote");
-        
-        // Request the list of elements to begin receiving value update notifications
-        [device elements];
+    if([device productID] == 0x0266 && [device vendorID] == 0x4C) {
+        if([[device transport] isEqualToString:@"BluetoothLowEnergy"] && [[device serialNumber] isEqualToString:@"DL5QD2HMGQQT"]) {
+            [self.siriRemotes addObject:device];
+            
+            
+            [device open];
+            NSLog(@"Connected to Siri Remote");
+            
+            // Request the list of elements to begin receiving value update notifications
+            [device elements];
+        } /*else {
+            [self.siriRemotes addObject:device];
+
+            [device open];
+            
+            HIDElement *rootElement = [[device elements] objectAtIndex:0];
+            
+            for(HIDElement *element in [rootElement children]) {
+                [self performSelectorInBackground:@selector(runloop:) withObject:element];
+            }
+            
+//            // Request the list of elements to begin receiving value update notifications
+//            HIDElement *element = [[[[device elements] objectAtIndex:0] children] objectAtIndex:0];
+//            NSLog(@"%@", element);
+            
+//            [self performSelectorInBackground:@selector(runloop:) withObject:element];
+        }*/
+    }
+}
+
+- (void)runloop:(HIDElement *)element
+{
+    while(true) {
+        [element readValue];
+        NSLog(@"%@", [[element value] byteValue]);
     }
 }
 
