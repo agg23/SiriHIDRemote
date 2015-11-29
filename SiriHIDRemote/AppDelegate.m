@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "HIDController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,6 +18,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+//    NSLog(@"%@", [HIDManager devices]);
+    [HIDController sharedInstance];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

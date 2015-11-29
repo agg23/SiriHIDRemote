@@ -1,0 +1,24 @@
+//
+//  HIDPrefixHeader.pch
+//  HIDKit
+//
+//  Created by Robert Luis Hoover on 9/13/14.
+//  Copyright (c) 2014 ars draconis. All rights reserved.
+//
+
+#ifndef HIDKit_HIDPrefixHeader_pch
+#define HIDKit_HIDPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+// Strip debug printing on release build.
+#ifdef DEBUG
+	#define HIDLog(...) NSLog(@"[HID Kit]: %@", [NSString stringWithFormat: __VA_ARGS__ ])
+#else
+	#define HIDLog(...) do {} while (0)
+#endif
+
+
+#endif // HIDKit_HIDPrefixHeader_pch
