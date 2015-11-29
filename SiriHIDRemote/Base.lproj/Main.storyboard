@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,20 +642,22 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="150" height="490"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="150" height="490"/>
+                        <value key="maxSize" type="size" width="150" height="490"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -667,15 +670,94 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="490"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="cnp-pz-9un" customClass="TouchpadView">
+                                <rect key="frame" x="0.0" y="275" width="150" height="215"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="t1c-c4-j3F" customClass="CircleButtonView">
+                                        <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RGs-zb-IeG"/>
+                                            <constraint firstAttribute="width" constant="50" id="pLR-SS-3fI"/>
+                                        </constraints>
+                                        <animations/>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="yyN-AC-l5g" customClass="CircleButtonView">
+                                        <rect key="frame" x="85" y="10" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="58Q-6Q-Rcv"/>
+                                            <constraint firstAttribute="height" constant="50" id="YtE-CF-B8q"/>
+                                        </constraints>
+                                        <animations/>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yyN-AC-l5g" secondAttribute="trailing" constant="15" id="Ij3-56-wsA"/>
+                                    <constraint firstItem="t1c-c4-j3F" firstAttribute="leading" secondItem="cnp-pz-9un" secondAttribute="leading" constant="15" id="Mz8-fR-Moc"/>
+                                    <constraint firstAttribute="height" constant="215" id="UMF-3t-civ"/>
+                                    <constraint firstAttribute="bottom" secondItem="t1c-c4-j3F" secondAttribute="bottom" constant="10" id="p48-GI-vgI"/>
+                                    <constraint firstAttribute="bottom" secondItem="yyN-AC-l5g" secondAttribute="bottom" constant="10" id="rVa-yD-pB9"/>
+                                </constraints>
+                                <animations/>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="nh1-cd-dhb">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="275"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="p9j-FK-RIu" customClass="CircleButtonView">
+                                        <rect key="frame" x="15" y="215" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="12f-Is-rp5"/>
+                                            <constraint firstAttribute="height" constant="50" id="hYb-WE-PLW"/>
+                                        </constraints>
+                                        <animations/>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Gam-Fd-MKN" customClass="CircleButtonView">
+                                        <rect key="frame" x="15" y="145" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6d7-z0-Czr"/>
+                                            <constraint firstAttribute="width" constant="50" id="cmU-7P-Ske"/>
+                                        </constraints>
+                                        <animations/>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="tgU-GX-fS2" customClass="CircleButtonView">
+                                        <rect key="frame" x="85" y="145" width="50" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="8l8-Mm-Q50"/>
+                                        </constraints>
+                                        <animations/>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tgU-GX-fS2" secondAttribute="trailing" constant="15" id="85H-PF-k9f"/>
+                                    <constraint firstItem="p9j-FK-RIu" firstAttribute="top" secondItem="nh1-cd-dhb" secondAttribute="top" constant="10" id="Cw0-4u-dbR"/>
+                                    <constraint firstItem="Gam-Fd-MKN" firstAttribute="leading" secondItem="nh1-cd-dhb" secondAttribute="leading" constant="15" id="KK2-7H-ygp"/>
+                                    <constraint firstItem="Gam-Fd-MKN" firstAttribute="bottom" secondItem="tgU-GX-fS2" secondAttribute="bottom" id="aof-vM-dd5"/>
+                                    <constraint firstItem="p9j-FK-RIu" firstAttribute="leading" secondItem="nh1-cd-dhb" secondAttribute="leading" constant="15" id="h9t-U0-1wE"/>
+                                    <constraint firstItem="Gam-Fd-MKN" firstAttribute="top" secondItem="p9j-FK-RIu" secondAttribute="bottom" constant="20" id="stG-ds-ULa"/>
+                                    <constraint firstItem="tgU-GX-fS2" firstAttribute="top" secondItem="p9j-FK-RIu" secondAttribute="top" id="z0i-HD-Nub"/>
+                                </constraints>
+                                <animations/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cnp-pz-9un" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="3Ka-ao-6GL"/>
+                            <constraint firstItem="cnp-pz-9un" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="FQK-Ir-NYE"/>
+                            <constraint firstItem="nh1-cd-dhb" firstAttribute="top" secondItem="cnp-pz-9un" secondAttribute="bottom" id="KpS-8I-0MN"/>
+                            <constraint firstAttribute="trailing" secondItem="cnp-pz-9un" secondAttribute="trailing" id="acx-ds-sdy"/>
+                            <constraint firstItem="nh1-cd-dhb" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="fYB-bm-16y"/>
+                            <constraint firstAttribute="bottom" secondItem="nh1-cd-dhb" secondAttribute="bottom" id="kc4-5n-ZW8"/>
+                            <constraint firstAttribute="trailing" secondItem="nh1-cd-dhb" secondAttribute="trailing" id="xY3-Jc-fEq"/>
+                        </constraints>
+                        <animations/>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="464" y="243"/>
         </scene>
     </scenes>
 </document>

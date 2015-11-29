@@ -12,7 +12,28 @@
 		667209C51BD0597A00F96509 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667209C41BD0597A00F96509 /* ViewController.m */; };
 		667209C71BD0597A00F96509 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 667209C61BD0597A00F96509 /* Assets.xcassets */; };
 		667209CA1BD0597A00F96509 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 667209C81BD0597A00F96509 /* Main.storyboard */; };
+		667209DA1BD0599B00F96509 /* HIDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667209D71BD0598B00F96509 /* HIDKit.framework */; };
+		66C4B88B1C0B7EC20026D649 /* HIDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C4B88A1C0B7EC20026D649 /* HIDController.m */; };
+		66E63D801C0B9553004E4F7F /* CircleButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E63D7F1C0B9553004E4F7F /* CircleButtonView.m */; };
+		66E63D831C0B9677004E4F7F /* TouchpadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E63D821C0B9677004E4F7F /* TouchpadView.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		667209D61BD0598B00F96509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 667209D11BD0598B00F96509 /* HIDKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1671F89919BB4EDC00F83913;
+			remoteInfo = HIDKit;
+		};
+		667209D81BD0598B00F96509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 667209D11BD0598B00F96509 /* HIDKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1671F8A419BB4EDC00F83913;
+			remoteInfo = HIDKitTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		667209BA1BD0597A00F96509 /* SiriHIDRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriHIDRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +45,13 @@
 		667209C61BD0597A00F96509 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		667209C91BD0597A00F96509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		667209CB1BD0597A00F96509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		667209D11BD0598B00F96509 /* HIDKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HIDKit.xcodeproj; path = "HIDKit-master/HIDKit.xcodeproj"; sourceTree = "<group>"; };
+		66C4B8891C0B7EC20026D649 /* HIDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDController.h; sourceTree = "<group>"; };
+		66C4B88A1C0B7EC20026D649 /* HIDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDController.m; sourceTree = "<group>"; };
+		66E63D7E1C0B9553004E4F7F /* CircleButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleButtonView.h; path = UI/CircleButtonView.h; sourceTree = "<group>"; };
+		66E63D7F1C0B9553004E4F7F /* CircleButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleButtonView.m; path = UI/CircleButtonView.m; sourceTree = "<group>"; };
+		66E63D811C0B9677004E4F7F /* TouchpadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchpadView.h; path = UI/TouchpadView.h; sourceTree = "<group>"; };
+		66E63D821C0B9677004E4F7F /* TouchpadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchpadView.m; path = UI/TouchpadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667209DA1BD0599B00F96509 /* HIDKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +69,7 @@
 		667209B11BD0597A00F96509 = {
 			isa = PBXGroup;
 			children = (
+				667209D11BD0598B00F96509 /* HIDKit.xcodeproj */,
 				667209BC1BD0597A00F96509 /* SiriHIDRemote */,
 				667209BB1BD0597A00F96509 /* Products */,
 			);
@@ -58,8 +88,11 @@
 			children = (
 				667209BD1BD0597A00F96509 /* AppDelegate.h */,
 				667209BE1BD0597A00F96509 /* AppDelegate.m */,
+				66C4B8891C0B7EC20026D649 /* HIDController.h */,
+				66C4B88A1C0B7EC20026D649 /* HIDController.m */,
 				667209C31BD0597A00F96509 /* ViewController.h */,
 				667209C41BD0597A00F96509 /* ViewController.m */,
+				66E63D7B1C0B953C004E4F7F /* UI */,
 				667209C61BD0597A00F96509 /* Assets.xcassets */,
 				667209C81BD0597A00F96509 /* Main.storyboard */,
 				667209CB1BD0597A00F96509 /* Info.plist */,
@@ -74,6 +107,26 @@
 				667209C11BD0597A00F96509 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		667209D21BD0598B00F96509 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				667209D71BD0598B00F96509 /* HIDKit.framework */,
+				667209D91BD0598B00F96509 /* HIDKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66E63D7B1C0B953C004E4F7F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				66E63D7E1C0B9553004E4F7F /* CircleButtonView.h */,
+				66E63D7F1C0B9553004E4F7F /* CircleButtonView.m */,
+				66E63D811C0B9677004E4F7F /* TouchpadView.h */,
+				66E63D821C0B9677004E4F7F /* TouchpadView.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,12 +174,35 @@
 			mainGroup = 667209B11BD0597A00F96509;
 			productRefGroup = 667209BB1BD0597A00F96509 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 667209D21BD0598B00F96509 /* Products */;
+					ProjectRef = 667209D11BD0598B00F96509 /* HIDKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				667209B91BD0597A00F96509 /* SiriHIDRemote */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		667209D71BD0598B00F96509 /* HIDKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HIDKit.framework;
+			remoteRef = 667209D61BD0598B00F96509 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		667209D91BD0598B00F96509 /* HIDKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HIDKitTests.xctest;
+			remoteRef = 667209D81BD0598B00F96509 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		667209B81BD0597A00F96509 /* Resources */ = {
@@ -147,7 +223,10 @@
 			files = (
 				667209C51BD0597A00F96509 /* ViewController.m in Sources */,
 				667209C21BD0597A00F96509 /* main.m in Sources */,
+				66E63D831C0B9677004E4F7F /* TouchpadView.m in Sources */,
 				667209BF1BD0597A00F96509 /* AppDelegate.m in Sources */,
+				66C4B88B1C0B7EC20026D649 /* HIDController.m in Sources */,
+				66E63D801C0B9553004E4F7F /* CircleButtonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +366,7 @@
 				667209D01BD0597A00F96509 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
