@@ -10,4 +10,6 @@
 
 @interface TouchpadView : NSView
 
+- (void)setState:(BOOL)state;
+
 @end

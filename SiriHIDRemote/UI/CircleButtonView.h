@@ -10,4 +10,6 @@
 
 @interface CircleButtonView : NSView
 
+- (void)setState:(BOOL)state;
+
 @end

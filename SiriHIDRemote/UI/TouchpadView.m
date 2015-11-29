@@ -22,4 +22,13 @@
     return self;
 }
 
+- (void)setState:(BOOL)state
+{
+    if(state) {
+        [self.layer setBackgroundColor:CGColorCreateGenericRGB(0, 0, 0, 0.6)];
+    } else {
+        [self.layer setBackgroundColor:CGColorCreateGenericRGB(1, 0, 0, 0.6)];
+    }
+}
+
 @end

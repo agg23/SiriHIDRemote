@@ -680,6 +680,17 @@
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="t1c-c4-j3F" customClass="CircleButtonView">
                                         <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4y-O4-k7p">
+                                                <rect key="frame" x="4" y="17" width="43" height="17"/>
+                                                <animations/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MENU" id="QPc-RW-YND">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="RGs-zb-IeG"/>
                                             <constraint firstAttribute="width" constant="50" id="pLR-SS-3fI"/>
@@ -725,8 +736,32 @@
                                     </customView>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="tgU-GX-fS2" customClass="CircleButtonView">
                                         <rect key="frame" x="85" y="145" width="50" height="120"/>
+                                        <subviews>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="w1n-T5-Q8m" customClass="CircleButtonView">
+                                                <rect key="frame" x="0.0" y="70" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="8OJ-pV-jrz"/>
+                                                    <constraint firstAttribute="height" constant="50" id="fJK-l0-9OY"/>
+                                                </constraints>
+                                                <animations/>
+                                            </customView>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="OrN-Bn-2yr" customClass="CircleButtonView">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="pO9-Zx-dES"/>
+                                                    <constraint firstAttribute="height" constant="50" id="yy1-DM-sku"/>
+                                                </constraints>
+                                                <animations/>
+                                            </customView>
+                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="8l8-Mm-Q50"/>
+                                            <constraint firstAttribute="trailing" secondItem="OrN-Bn-2yr" secondAttribute="trailing" id="JUo-jX-aql"/>
+                                            <constraint firstItem="w1n-T5-Q8m" firstAttribute="leading" secondItem="tgU-GX-fS2" secondAttribute="leading" id="Vro-pr-fDg"/>
+                                            <constraint firstAttribute="bottom" secondItem="OrN-Bn-2yr" secondAttribute="bottom" id="Yq6-2d-lAz"/>
+                                            <constraint firstItem="OrN-Bn-2yr" firstAttribute="leading" secondItem="tgU-GX-fS2" secondAttribute="leading" id="Z8P-ob-keF"/>
+                                            <constraint firstItem="w1n-T5-Q8m" firstAttribute="top" secondItem="tgU-GX-fS2" secondAttribute="top" id="duk-GV-Mmh"/>
+                                            <constraint firstAttribute="trailing" secondItem="w1n-T5-Q8m" secondAttribute="trailing" id="vGq-3Q-QZX"/>
                                         </constraints>
                                         <animations/>
                                     </customView>
@@ -754,6 +789,15 @@
                         </constraints>
                         <animations/>
                     </view>
+                    <connections>
+                        <outlet property="airplayButton" destination="yyN-AC-l5g" id="tdH-FH-Hfq"/>
+                        <outlet property="menuButton" destination="t1c-c4-j3F" id="cS7-ce-PY2"/>
+                        <outlet property="micButton" destination="p9j-FK-RIu" id="e0b-fM-ClW"/>
+                        <outlet property="playpauseButton" destination="Gam-Fd-MKN" id="NqT-0b-HUl"/>
+                        <outlet property="touchpadButton" destination="cnp-pz-9un" id="ggd-xF-CW5"/>
+                        <outlet property="volumedownButton" destination="OrN-Bn-2yr" id="ghc-rQ-XRQ"/>
+                        <outlet property="volumeupButton" destination="w1n-T5-Q8m" id="tmO-vy-AWF"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

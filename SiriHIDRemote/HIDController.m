@@ -44,7 +44,6 @@
         [HIDManager sharedManager];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceConnectedNotification:) name:HIDManagerDeviceDidConnectNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(elementValueUpdateNotification:) name:HIDManagerElementValueDidUpdateNotification object:nil];
     }
     return self;
 }
