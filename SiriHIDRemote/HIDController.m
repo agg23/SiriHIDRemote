@@ -54,6 +54,8 @@
     
     // TODO: Replace constant "DL5QD2HMGQQT" with a better way of finding the correct HIDDevice object
     if([device productID] == 0x0266 && [device vendorID] == 0x4C) {
+        [device elements];
+        
         if([[device transport] isEqualToString:@"BluetoothLowEnergy"] && [[device serialNumber] isEqualToString:@"DL5QD2HMGQQT"]) {
             [self.siriRemotes addObject:device];
             
