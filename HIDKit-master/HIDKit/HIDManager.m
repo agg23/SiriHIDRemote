@@ -53,20 +53,21 @@ static void HIDManagerDeviceRemovedCallback(void * context, IOReturn result, voi
 	
 	HIDManager *manager = (__bridge HIDManager *)context;
 	HIDDevice *disconnectedDevice;
-	
-	for (HIDDevice *aDevice in manager.devices)
+    	
+    for (int i = 0; i < [manager.devices count]; i++)
 	{
-		if (aDevice.device == device)
+        HIDDevice *aDevice = [manager.devices objectAtIndex:i];
+        
+        if (aDevice != nil && aDevice.device == device)
 		{
 			disconnectedDevice = aDevice;
+            // FIXME: We really should have a way as marking a device as removed.
+            // We can't just deallocate it here since others may be referencing it.
+            // Plus, we can then pass it along in our notification later.
+            [manager.devices removeObjectAtIndex:i];
 		}
 	}
-	
-	// FIXME: We really should have a way as marking a device as removed.
-	// We can't just deallocate it here since others may be referencing it.
-	// Plus, we can then pass it along in our notification later.
-	[manager.devices removeObject:disconnectedDevice];
-	
+
 	[[NSNotificationCenter defaultCenter] postNotificationName:HIDManagerDeviceDidDisconnectNotification object:disconnectedDevice];
 }
 

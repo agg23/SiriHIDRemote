@@ -57,14 +57,14 @@
         [device elements];
         
         if([[device transport] isEqualToString:@"BluetoothLowEnergy"] && [[device serialNumber] isEqualToString:@"DL5QD2HMGQQT"]) {
-            [self.siriRemotes addObject:device];
+//            [self.siriRemotes addObject:device];
             
             
-            [device open];
-            NSLog(@"Connected to Siri Remote");
-            
-            // Request the list of elements to begin receiving value update notifications
-            [device elements];
+//            [device open];
+//            NSLog(@"Connected to Siri Remote");
+//            
+//            // Request the list of elements to begin receiving value update notifications
+//            [device elements];
         } /*else {
             [self.siriRemotes addObject:device];
 

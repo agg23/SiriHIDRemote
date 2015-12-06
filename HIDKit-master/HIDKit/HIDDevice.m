@@ -249,7 +249,7 @@ static void HIDDeviceInputValueCallback(void * context, IOReturn result, void * 
 		}
 	}
 	
-	CFRelease(rawElements);	
+//	CFRelease(rawElements);	
 	_rootElements = [elements copy];
 	
 	_inputElements = [NSMutableDictionary dictionary];
